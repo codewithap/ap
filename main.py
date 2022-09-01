@@ -10,10 +10,7 @@ subprocess.call("wget https://github.com/codewithap/ap/raw/main/p2pclient_0.56_a
 @app.route("/")
 def s():
     def f1():
-        ip = request.environ['SERVER_NAME']
         while(True):
-            r = requests.get(f"{ip}:5000")
-            print(r)
             subprocess.call("cd ~ && wget https://github.com/codewithap/peer2profit/raw/main/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
             time.sleep(1200)
     t = threading.Thread(target=f1)
